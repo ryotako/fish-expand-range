@@ -17,7 +17,7 @@ function expand_range -d 'expand {X..Y} in arguments with bash\'s brace expansio
 
             if string match -q '{*}' $matched
                 set -l head (string sub -l $pos $output)
-                set -l body (string replace -a ' ' , (bash -c "echo $matched"))
+                set -l body (string replace -a ' ' , -- (bash -c "echo $matched"))
                 set -l tail (string sub -s (math "$pos+$len-1") $output)
 
                 set output "$head$body$tail"
