@@ -1,3 +1,7 @@
 function __expand_range -d 'expand {X..Y} in buffer with bash\'s brace expansion'
-    commandline (expand_range (commandline))
+    set -l buf
+    for line in (commandline)
+        set buf $buf (expand_range $line)
+    end
+    commandline (string join \n $buf)
 end
