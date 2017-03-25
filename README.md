@@ -18,8 +18,8 @@ fisher ryotako/fish-expand-range:keybindings
 ```
 
 ## Usage
-This plugin provides a function `__expand_brace` to replace `{1..3}` into `{1,2,3}` in commandline.
-You can make keybinds with this as below.
+This plugin provides a function `__expand_brace` to replace `{1..3}` into `{1,2,3}` in a command line.
+You can make key binds with this function as below.
 
 ```
 # Expand and execute.
