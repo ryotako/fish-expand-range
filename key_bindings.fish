@@ -1,4 +1,3 @@
-set -g fish_preprocessor __expand_range
-bind \n (string join ';' $fish_preprocessor)'; commandline -f execute'
-bind \r (string join ';' $fish_preprocessor)'; commandline -f execute'
+bind \n 'type -q __expand_range; and __expand_range; commandline -f execute'
+bind \r 'type -q __expand_range; and __expand_range; commandline -f execute'
 
